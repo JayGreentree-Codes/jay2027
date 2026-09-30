@@ -3,12 +3,14 @@
 @section('content')
 
 
-<section class="bg-neutral-primary">
-    <div class="py-8 px-4 mx-auto max-w-screen-2xl text-center lg:py-16">
-        <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">
+
+
+<section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-dark bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-6 text-4xl font-bold tracking-tighter text-white md:text-5xl lg:text-6xl">
             We invest in the world’s potential
         </h1>
-        <p class="mb-8 text-base font-normal text-body md:text-xl">
+        <p class="mb-8 text-base font-normal text-white md:text-xl sm:px-16 lg:px-48">
             Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
         </p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 md:space-x-4">
@@ -21,4 +23,20 @@
     </div>
 </section>
 
+
+
+<div class="py-8 border-t border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-3xl font-medium text-gray-500 mb-6">
+            Site made possible by
+        </p>
+        <div class="grid grid-cols-3 gap-8 md:grid-cols-5 items-center justify-items-center opacity-60">
+            <img class="h-8 md:h-12" src="/img/NASA_logo.svg" alt="NASA">
+            <img class="h-8 md:h-12" src="/img/cbc.svg" alt="Canadian Broadcasting Corporation">
+            <img class="h-8 md:h-12" src="/img/craft-cms-logo-knockout.svg" alt="Craft CMS">
+            <img class="h-8 md:h-12 hidden md:block" src="/img/umb.svg" alt="UMass Boston">
+            <img class="h-8 md:h-12 hidden md:block" src="/img/uofc.svg" alt="University of Chicago">
+        </div>
+    </div>
+</div>
 @endsection
