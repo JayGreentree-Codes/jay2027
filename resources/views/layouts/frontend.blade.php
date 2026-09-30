@@ -71,12 +71,16 @@
   </nav>
 </header>
 
-    <main>
-        @yield('content') <!-- This is where other pages inject their HTML -->
-    </main>
+    <div class="container">
+        <div class="row">
+            @yield('content') <!-- This is where other pages inject their HTML -->
+        </div>
+    </div>
 
     <footer class="py-8 border-t border-slate-800/60 text-center text-sm text-slate-500">
-        <p>&copy; {{ date('Y') }} John Doe. Built with Laravel and Tailwind CSS.</p>
+        <p>
+            Copyright &copy; {{ date('Y') }} {{ config('app.name') }}. 
+        </p>
     </footer>
 
 </body>
