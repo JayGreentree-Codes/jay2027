@@ -1,5 +1,13 @@
 @import 'tailwindcss';
+@import 'flowbite';
 @import '../../vendor/livewire/flux/dist/flux.css';
+@import "flowbite/src/themes/default";
+
+/* 2. Load the Flowbite plugin using Tailwind v4 syntax */
+@plugin "flowbite/plugin";
+
+/* 3. Tell Tailwind v4 where to scan for Flowbite's class names */
+@source "../node_modules/flowbite";
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
