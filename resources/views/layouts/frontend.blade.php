@@ -15,8 +15,24 @@
               </span>
           </a>
           <div class="flex items-center space-x-6 rtl:space-x-reverse">
-              <a href="tel:5541251234" class="text-sm  text-body hover:underline">(555) 412-1234</a>
-              <a href="#" class="text-sm font-medium text-fg-brand hover:underline">Login</a>
+              <a href="" class="text-sm  text-body hover:underline">
+                  
+              </a>
+   @auth
+        <!-- Links visible only to Logged-In Users -->
+        <a href="{{ url('/dashboard') }}" class="text-sm font-medium text-fg-brand hover:underline">Dashboard</a>
+        
+        <!-- Logout Form (Required because logout should be a POST request for security) -->
+        <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+    @endauth
+    @guest
+              <a href="/login" class="text-sm font-medium text-fg-brand hover:underline">
+                Login
+              </a>
+    @endguest
           </div>
       </div>
   </nav>
@@ -25,16 +41,29 @@
           <div class="flex items-center">
               <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                   <li>
-                      <a href="#" class="text-heading hover:underline" aria-current="page">Home</a>
+                      <a href="" class="text-heading hover:underline" aria-current="page">
+                        Home
+                      </a>
                   </li>
                   <li>
-                      <a href="#" class="text-heading hover:underline">Company</a>
+                      <a href="" class="text-heading hover:underline">
+                        Projects
+                      </a>
                   </li>
                   <li>
-                      <a href="#" class="text-heading hover:underline">Team</a>
+                      <a href="" class="text-heading hover:underline">
+                        Work
+                      </a>
                   </li>
                   <li>
-                      <a href="#" class="text-heading hover:underline">Features</a>
+                      <a href="" class="text-heading hover:underline">
+                        Contact
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-heading hover:underline">
+                        Sponsor Me
+                      </a>
                   </li>
               </ul>
           </div>
